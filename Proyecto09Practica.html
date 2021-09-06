@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi primera web</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table style = "width: 500px;">
+        <thead>
+            <tr>
+                <th>Precio</th>
+                <th>Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hola beats</td>
+                <td>Gratis</td>
+            </tr>
+            <tr>
+                <td>Python sin fronteras</td>
+                <td>10$</td>
+            </tr>
+            <tr>
+                <td>Chanchito feliz muy feliz</td>
+                <td>29.90$</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ul = unorderer list, lista no ordenada -->
+    <ul>
+        <!-- li = list item, elemento de la lista -->
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <!-- ol = ordered list, lista ordenada -->
+    <ol>
+        <li value = "50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li> 
+            <ol> <!-- Lista ordenada dentro de otra lista ordenada-->
+                <li style = "list-style: lower-alpha;">Sub elemento 1</li> <!-- Para ordenar de formas diferentes-->
+                <li style = "list-style: lower-alpha;">Sub elemento 2</li>
+                <li style = "list-style: lower-alpha;">Sub elemento 3</li>
+                <li style = "list-style: lower-alpha;">Sub elemento 4</li>
+            </ol>
+        </li>
+    </ol>
+    <!-- ? Formularios en HTML -->
+    <form action = "/formulario" method="POST" >
+        <!-- ! El action es la ruta en la que se guardarán los datos de nuestro formulario -->
+        <!-- TODO: method tenemos GET (Envia los valores de los campos a través de la URL Max 255 caracteres)y POST (Envia los valores de los campos ocultos en el coódigo, en las cabeceras "headers") -->
+        <label for = "nombre" > Nombre </label>
+        <!-- * el " for = 'ejemplo' " es para indicar que cuando se de click se autodiriga a la casilla correspondiente del label, ya sea 'input' o 'texarea' con la sección " id = 'ejemplo' "-->
+        <input type= "text" id = "nombre" name = "nombre" placeholder = "Nombre"/>
+        <!-- tipos de Ttype:
+            text (este es el valor defecto y es de ingreso de texto), 
+            submit (es un boton para enviar datos), 
+            email (espera un correo como respuesta), 
+            password(oculta los datos ingresados), 
+            radio(es un boton redondo "marcable"), 
+            checbox (es un boton redondo "chuleable"), 
+            file(para seleccionar un archivo del equipo),-->
+        <!-- ? La propiedad " name = 'ejemplo' " es la que guarda el valor que introduzcamos en el 'input' -->
+        <!-- ! El " placeholder = 'ejemplo' " se usa para comentar la caja de texto sin modificar su contenido, es como la preview -->
+        <br>
+        <label for = "apellido" > Apellido </label>
+        <input value = "feliz" type = "text" id = "apellido" name = "apellido" placeholder="Apellido"/>
+        <!-- ! el " value = 'ejemplo' " se usa para definir un parametro estandar en la caja de texto -->
+        <br>
+        <label for = "comentario" > Comentario </label>
+        <!-- ? El "label" es el que da nombre a los recuadros, el "input" es para ingresar datos y el "textarea" es para añadir un texto más amplio, definiendo el tamaño del mismo-->
+        <textarea cols = "50" rows = "10" id= "comentario" > </textarea>
+        <!-- TODO: <textarea cols = "50" rows = "10" id= "comentario" > En caso de que quisiera un valor por defecto, tiene que ir aquí </textarea> -->
+        <!-- * " cols = 'número columnas' " , " rows = 'número filas' "-->
+        <br>
+        <!-- <input type = "submit" /> -->
+        <button type = "submit"> Tipo submit </button>
+        <!-- Cuando hay una etiqueta 'form' el boton asume el tipo de 'input type = "submit"' para enviar los datos.  es el tipo defecto de button-->
+        <button type = "button"> Tipo botón </button>
+        <!-- Para darle función al botón se usa JavaScript -->
+        <button type = "reset"> Tipo reset </button>
+        <!-- Resetea los valores iniciales del formulario -->
+        
+        <!--button type = "button, reset, submit" se pueden añadir imagenes a los botones-->
+        <button type = "button"> <img src = "img/youtube.jpg" height="12"/> </button>
+    </form>
+    <h1>Mi primer heading</h1>
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Mi sexto heading</h6>
+    <p>Este es un parrafo en html en el cual se usa la etiqueta "p" </p>
+    <p>Chanchito triste está muy triste, este es otro parrafo en otra linea, para lo cual se usa otra etiqueta de "p"</p>
+    <hr>
+    <!-- ! Con la etiqueta "hr" podemos separar texto, parrafos o cualquier parte de la web y asi se comenta en HTML-->
+    <h2>Chanchito felipe</h2>
+    <p>Este texto es <span style = "color: blue;">mucho más largo</span> y es para mostrar 
+        <br> la etiqueta de span!</p>
+        <!-- ? La etiqueta "br" es para hacer saltos de linea-->
+    <a href="http://www.google.com.co">Ir a Google</a>
+    <!-- TODO: rediferccionar a un link en misma pagina -->
+    <a target = "_blank" href="http://www.youtube.com">Ir a Youtube</a>
+    <br>
+    <!-- TODO: redireccionar a un link en otra pestaña -->
+    <img src="img/youtube.jpg" height="150" />
+    <!-- * con "width" cambiamos el ancho de una imagen y con "height" el alto de la misma -->
+</body>
+</html>
